@@ -5,6 +5,9 @@ import { Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Meu css
 import './App.css'
+//Meus componentes
+import Post from './Post';
+import Coments from './Coments';
 
 
 
@@ -14,32 +17,6 @@ import './App.css'
 
 //O state de um componente é realmente o estado do seu componente. Ele é um objeto onde você adiciona
 //os estados que você vai precisar usar no seu componente
-
-
-
-//componente aleatorio
-class Frase extends Component {
-    render() {
-        return(
-            <p>Valor da props: {this.props.fraseProp}</p> 
-        );
-
-    }
-}
-
-//componente aleatorio
-class Botao extends Component {
-    render() {
-        return(
-          <>
-            <button>
-             {this.props.botaoProp}
-            </button>
-          </>
-        );             
-    }
-}
-
 
 
 //Componente Principal que é renderizado em "index.js"
@@ -64,16 +41,11 @@ export default class App extends Component {
 
     //render JSX
     render() {
-        console.log(this.state);
         return(
             <div className="app">
-
-                {/* Declaro o valor da props quando inicializo o componente que à contém */}
-                <Botao botaoProp="button" />         
-                <Botao botaoProp="button2" />
-                <Botao botaoProp="button3" />
-                <Frase fraseProp="Vithanderson" />
-
+                <Post title="ReactJs na Kuak"/>                
+                <Post title="NodeJs na Kuak"/> 
+                <Post title="ReactNative na Kuak"/> 
             </div>
         );
 
