@@ -21,7 +21,7 @@ import './App.css'
 class Frase extends Component {
     render() {
         return(
-            <p>Valor da props: {this.props.fraseProp}</p> // defini a props "oTexto" aqui e quando chamei a classe em App, logo abaixo, mando o valor da props
+            <p>Valor da props: {this.props.fraseProp}</p> 
         );
 
     }
@@ -32,8 +32,8 @@ class Botao extends Component {
     render() {
         return(
           <>
-            <button onClick={   ()=>   {this.handleClick(this.props.botaoProp)}   }>
-             {this.props.botaoProp1}
+            <button>
+             {this.props.botaoProp}
             </button>
           </>
         );             
@@ -69,12 +69,10 @@ export default class App extends Component {
             <div className="app">
 
                 {/* Declaro o valor da props quando inicializo o componente que à contém */}
-                <Botao botaoProp="button"/>         
-                <Botao botaoProp="button2"/>
-                <Botao botaoProp="button3"/>
-                <Frase fraseProp="Vithanderson"/>
-
-                <button onclick> </button>
+                <Botao botaoProp="button" />         
+                <Botao botaoProp="button2" />
+                <Botao botaoProp="button3" />
+                <Frase fraseProp="Vithanderson" />
 
             </div>
         );
