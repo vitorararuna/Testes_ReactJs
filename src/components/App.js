@@ -44,8 +44,6 @@ export default class App extends Component {
         return(
             <div className="app">
                 <Post title="ReactJs na Kuak"/>                
-                <Post title="NodeJs na Kuak"/> 
-                <Post title="ReactNative na Kuak"/> 
             </div>
         );
 

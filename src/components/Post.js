@@ -19,7 +19,7 @@ export default class Post extends Component {
         };
  
         this.handleSubmit = this.handleSubmit.bind(this); /*Referenciando o this no escopo da funcao handleSubmit*/
-        this.handleTextChange = this.handleTextChange.bind(this); 
+        this.handleChange = this.handleChange.bind(this); 
     }
 
     handleSubmit(e){
@@ -33,14 +33,19 @@ export default class Post extends Component {
 
     }   
 
-    handleTextChange(e){
+    handleChange(e){    //HandleChangeUniversal => basta passar o value={this.state.algum} e o name='algum' no input do formulário
+
         /*Vamos alterar o estado da nossa aplicação toda vez que haver uma alteração no input, passando o seu valor*/
-        this.setState({comentarioNovo: e.target.value});
+        var target = e.target;
+        var value = target.value;
+        var name = target.name;
+        this.setState({ [name]: value} );
 
     }
 
 
     render(){
+        console.log(this.state.comentarioNovo);
         return(
 
             <div>
@@ -49,7 +54,8 @@ export default class Post extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <input 
                         value={this.state.comentarioNovo}
-                        onChange={this.handleTextChange}     /*Funcao que é disparada toda vez que o nosso input for alterado*/
+                        name = 'comentarioNovo'
+                        onChange={this.handleChange}     /*Funcao que é disparada toda vez que o nosso input for alterado*/
                     />
                     <button type="submit">Comentar</button>
                 </form>
