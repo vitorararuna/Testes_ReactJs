@@ -1,5 +1,5 @@
 //React
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 //Bootstrap
 import { Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,36 +12,70 @@ import './App.css'
 //O componente pode ser interpretado como uma função no js, onde os parametros entrada são as PRPOS
 //e o retorno são elm em html, que no caso é JSX 
 
+//O state de um componente é realmente o estado do seu componente. Ele é um objeto onde você adiciona
+//os estados que você vai precisar usar no seu componente
+
+
+
+//componente aleatorio
 class Frase extends Component {
     render() {
         return(
-            <p>Porps que colocada em App: {this.props.oTexto}</p> // defini a props "oTexto" aqui e quando chamei a classe em App, logo abaixo, mando o valor da props
+            <p>Valor da props: {this.props.fraseProp}</p> // defini a props "oTexto" aqui e quando chamei a classe em App, logo abaixo, mando o valor da props
         );
 
     }
 }
 
+//componente aleatorio
 class Botao extends Component {
     render() {
-        console.log(this.props) 
         return(
           <>
-            <button>{this.props.oBotao}</button>
-            <p>Segunda props: {this.props.Outro}</p>
+            <button onClick={   ()=>   {this.handleClick(this.props.botaoProp)}   }>
+             {this.props.botaoProp1}
+            </button>
           </>
         );             
     }
 }
 
 
+
+//Componente Principal que é renderizado em "index.js"
 export default class App extends Component {
+   
+    //construtor
+    constructor(props){
+        super(props);
+
+        this.state ={
+            labelText: '',
+        };
+    }
+
+    //funções
+    setLabelText = (labelText) => {
+        this.setState({ labelText });
+    }
+
+
+
+
+    //render JSX
     render() {
+        console.log(this.state);
         return(
             <div className="app">
-                <Botao oBotao="clique aqui" Outro="vihse"/>
-                <Frase oTexto="Vithanderson"/>
-                <Frase oTexto="Marinanderson"/>
-                <Frase oTexto="Lukanderson"/>
+
+                {/* Declaro o valor da props quando inicializo o componente que à contém */}
+                <Botao botaoProp="button"/>         
+                <Botao botaoProp="button2"/>
+                <Botao botaoProp="button3"/>
+                <Frase fraseProp="Vithanderson"/>
+
+                <button onclick> </button>
+
             </div>
         );
 
