@@ -4,11 +4,17 @@ import React, {Component, useState} from 'react';
 import { Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Meu css
-import './App.css'
+import './estilos.css'
 //Meus componentes
 import Post from './Post';
-import Coments from './Coments';
+import Testes2 from './SoTestando2';
+import Testes from './SoTestando';
 
+//Font-awesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fab, fas)
 
 
 
@@ -21,11 +27,10 @@ import Coments from './Coments';
 
 //Componente Principal que é renderizado em "index.js"
 export default class App extends Component {
-   
+
     //construtor
     constructor(props){
         super(props);
-
         this.state ={
             labelText: '',
         };
@@ -36,14 +41,11 @@ export default class App extends Component {
         this.setState({ labelText });
     }
 
-
-
-
     //render JSX
     render() {
         return(
             <div className="app">
-                <Post title="ReactJs na Kuak"/>                
+                <Testes title="ReactJs na Kuak"/> 
             </div>
         );
 

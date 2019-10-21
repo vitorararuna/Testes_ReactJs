@@ -1,9 +1,9 @@
 import React, {Component, useState} from 'react';
 import { Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
+import './estilos.css'
 
-export default class Coments extends Component {
+export default class Testes2 extends Component {
    
     render(){
         return(

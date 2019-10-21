@@ -2,9 +2,7 @@
 import React, {Component, useState} from 'react';
 import { Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
-import Coments from './Coments';
-
+import './estilos.css'
 
 
 export default class Post extends Component {
@@ -60,9 +58,22 @@ export default class Post extends Component {
                     <button type="submit">Comentar</button>
                 </form>
 
-                {this.state.comentario.map((comentario, index) =>{
-                    return <Coments key={index} text={comentario.text}/>
+                {this.state.comentario.map((comentario, index) => {
+                    return <Coments key={index} text={comentario.text} />
                 })}
+
+            </div>
+        );
+    }
+} 
+
+class Coments extends Component {
+
+    render() {
+        return (
+
+            <div>
+                <p>{this.props.text}</p>
 
             </div>
         );
