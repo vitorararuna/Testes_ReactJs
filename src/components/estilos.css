@@ -40,3 +40,129 @@
 .rosinha{
     background-color: #ff3d6f;
 }
+
+
+.form-wizard.form-group {
+    background: #171717;
+    padding: 1.8rem;
+    border-radius: 6px;
+}
+
+.form-wizard.form-group.form-label {
+   font-size: 1.1rem;
+   font-family: Quicksand;
+   margin-bottom: 1rem;
+}
+
+
+.form-wizard.avatar-img {
+  border-radius: 0.3rem;
+}
+
+.form-wizard.display-brand {
+    font-family: Quicksand;
+    display: inline;
+    color: #c5c5c5;
+    font-weight: normal;
+  }
+  /* ----------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* 
+  .withdraw-area{
+  padding: 1.5rem 0;
+}
+
+.card-c{
+  height: 100;
+}
+
+.vitin1{
+  margin-top: 15px;
+}
+
+.vitin2{
+  border-radius: 10px;
+}
+
+.btn-rounded-delete{
+  background-color: black;
+  position: relative;
+  top: 20px;
+  right: -15px;
+  &:hover {
+    background-color: #ff3d6f;
+  }
+}
+
+
+.vitinbox{
+  width: 40px;
+  height: 40px;
+  background-color:#ff3d6f;
+  border-radius: 10px;
+  padding: 5px;
+  }
+
+.margin{
+  margin-top: 10px;
+}
+.align-left{
+  float: left;
+}
+
+.vitin4{
+  color: #ff3d6f;
+  background-color: black;
+  border: 1px solid #ff3d6f;
+  border-radius: 6px ;
+  margin-right: 10px;
+  padding: 3px;;
+}
+
+.b-radius{
+  border-radius: 10px;
+}
+
+.add-img{
+  padding: 5px 1px;
+  width: 20px;
+  height: 20px;
+}
+
+.padding-0{
+  padding: 0px;
+}
+
+.cursor{
+  cursor: pointer;
+}
+
+.border-card{
+  color: #ff3d6f;
+  border: 1px solid #ff3d6f;
+  border-radius: 6px ;
+}
+
+.bbd{
+  border-radius: 4px ;
+}
+.border-all{
+  border: 1px solid #2b2b2b;
+}
+
+.border-all2{
+  border: 1px solid #2b2b2b;
+  border-radius: 5px;
+}
+
+.padding-card{
+  padding: 5px;
+}
+
+.t-c{
+  text-align: center;
+}
+
+.green{
+  color:#00d97e;
+} */

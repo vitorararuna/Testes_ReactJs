@@ -1,14 +1,12 @@
 //React
-import React, {Component, useState} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 //Bootstrap
 import { Modal, OverlayTrigger, Tooltip, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 //Meu css
-import './estilos.css'
 //Meus componentes
-import Post from './Post';
-import Testes2 from './SoTestando2';
-import Testes from './SoTestando';
+import Retirada from './components/SoTestando2';
+import TestandoH from './components/SoTestando3';
 
 //Font-awesome
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -36,16 +34,11 @@ export default class App extends Component {
         };
     }
 
-    //funções
-    setLabelText = (labelText) => {
-        this.setState({ labelText });
-    }
-
     //render JSX
     render() {
         return(
             <div className="app">
-                <Testes title="ReactJs na Kuak"/> 
+                <TestandoH /> 
             </div>
         );
 
